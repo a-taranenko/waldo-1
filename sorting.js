@@ -8,8 +8,16 @@ var students = [
 console.log(students);
 
 function studentSort(a, b) {
-  if (a['age'] > b['age'] && a['name'] < b['name']) {
-    return - 1;
+  if (a['name'] < b['name']) {
+      return -1;
+  } else if (a['name'] === b['name']) {
+
+    if (a['age'] > b['age']) {
+      return -1;
+    } else {
+      return 1;
+    }
+
   } else {
     return 1;
   }
